@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-3">
+        <div
+            class="card"
+            ng-repeat="weather in $ctrl.weatherData"
+        >
+            <div class="card-header">
+                <img
+                    ng-src="http://openweathermap.org/img/w/{{ weather.weather[0].icon }}.png"
+                    alt="icon depicting current weather"
+                >
+                <h5 class="card-title">
+                    {{ weather.dt * 1000 | date:'EEEE, MMMM d' }}
+                </h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text text-muted">
+                    daytime temperature: {{ weather.temp.day }} &#8451;
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

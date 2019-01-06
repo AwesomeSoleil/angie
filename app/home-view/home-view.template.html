@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-sm-6 offset-sm-3">
+        <h3>forecast by city</h3>
+        <div class="form-group">
+            <input
+                type="search"
+                class="form-control"
+                ng-model="$ctrl.cityName"
+                ng-change="$ctrl.inputChangeHandler();"
+                required
+            />
+        </div>
+        <a
+            href="#/forecast"
+            class="btn btn-outline-primary"
+        >
+            get forecast
+        </a>
+    </div>
+</div>
